@@ -1,0 +1,353 @@
+/* --- VARIABLES DE COULEURS (Thème Vert & Blanc) --- */
+:root {
+    --primary-green: #059669; /* Vert émeraude moderne */
+    --primary-hover: #047857; /* Vert plus foncé au survol */
+    --light-green: #d1fae5; /* Vert très pâle pour les mises en évidence */
+    --bg-page: #f8f9fa; /* Gris extrêmement clair pour le fond de page */
+    --bg-white: #ffffff;
+    --text-dark: #1f2937; /* Gris très foncé pour le texte (plus doux pour les yeux que le noir pur) */
+    --text-light: #4b5563;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    --radius: 8px;
+}
+
+/* --- RESET BASIQUE --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-green);
+}
+
+/* --- EN-TÊTE ET NAVIGATION --- */
+.header {
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    background-color: var(--light-green);
+    color: var(--primary-hover);
+}
+
+/* Menu Déroulant */
+.list {
+    position: relative;
+    display: inline-block;
+}
+
+.list-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-white);
+    min-width: 220px;
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.list-content a {
+    color: var(--text-dark);
+    padding: 12px 16px;
+    display: block;
+    border-radius: 0;
+}
+
+.list-content a:hover {
+    background-color: var(--light-green);
+}
+
+.list:hover .list-content {
+    display: block;
+}
+
+/* --- SECTION ACCROCHE (HERO) --- */
+.hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-hover) 100%);
+    color: var(--bg-white);
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* --- SECTION "À LA UNE" (CARTES) --- */
+.featured {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.featured h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--bg-white);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    border-top: 4px solid var(--primary-green);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+    color: var(--primary-green);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn-lire {
+    align-self: flex-start;
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+/* --- VUE D'UNE LETTRE DÉTAILLÉE --- */
+.letter-view {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    color: var(--primary-green);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.letter-header {
+    text-align: center;
+    margin-bottom: 40px;
+   
+}
+
+.letter-header h2 {
+    color: var(--primary-green);
+    font-size: 2.2rem;
+    z-index: 4;
+}
+
+.letter-content-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Le "Papier" de la lettre */
+.letter-paper {
+    flex: 2;
+    background-color: var(--bg-white);
+    padding: 60px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    line-height: 1.8;
+}
+
+.letter-paper .expediteur {
+    margin-bottom: 30px;
+}
+
+.letter-paper .destinataire {
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.letter-paper .date {
+    top:0;
+    text-align: right;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.letter-paper .objet {
+    margin-bottom: 30px;
+}
+
+.letter-paper .corps-lettre p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.letter-paper .signature {
+    text-align: right;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+/* Effet pédagogique au survol des sections de la lettre */
+.section-hover {
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.section-hover:hover {
+    background-color: var(--light-green);
+    border-color: var(--primary-green);
+    cursor: help;
+}
+
+/* Panneau latéral des conseils */
+.letter-tips {
+    flex: 1;
+    background-color: var(--bg-white);
+    padding: 25px;
+    border-radius: var(--radius);
+    border-left: 5px solid var(--primary-green);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 90px;
+}
+
+.letter-tips h3 {
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.letter-tips ul {
+    list-style-type: none;
+}
+
+.letter-tips li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-dark);
+}
+
+.letter-tips li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-green);
+    font-weight: bold;
+}
+
+/* --- PIED DE PAGE --- */
+.footer {
+    background-color: var(--bg-white);
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.footer p {
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.footer .copyright {
+    font-size: 0.9rem;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 900px) {
+    .letter-content-wrapper {
+        flex-direction: column;
+    }
+    
+    .letter-tips {
+        width: 100%;
+        position: static;
+    }
+    
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .letter-paper {
+        padding: 30px 20px;
+    }
+}

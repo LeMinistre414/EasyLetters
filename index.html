@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Letters - L'art de la rédaction autonome</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" defer></script>
+    <script src="./js/data.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Easy Letter's</h1>
+        </div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Acceuil</a></li>
+                <li class="list">
+                    <a href="" class="list-btn">Catégories de lettres</a>
+                    <div class="list-content" id="category-menu">
+                        <a href="" data-cat="emploi_stage">Emploi & Stage</a>
+                        <a href="" data-cat="plaintes">Plaintes & Explications</a>
+                        <a href="" data-cat="cv">Curruculum Vitae</a>
+                        <a href="" data-cat="rapports">Rapports & Compte rendu</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="app-contenair">
+
+        <section class="hero"> #Section principale
+            <h2>Maîtrisez l'art de la correspondance.</h2>
+            <p>Réapprenez à structurer votre pensée et vos écrits administratifs par vous-même, à l'ancienne, sans dépendre de l'intélligence artificielle.</p>
+        </section>
+
+        <section class="featured"> #A la une
+            <h3>Modèles Indispensables</h3>
+            <div class="card-grid">
+                <!-- Carte 1 -->
+                <article class="card" onclick="loadLetter('demande_stage')">
+                    <h4>Demande de Stage Académique</h4>
+                    <p>Modèles standars</p>
+                    <span class="btn-read">Voir la structure </span>
+                </article>
+
+                <!-- Carte 2 -->
+                <article class="card" onclick="loadLetter('demande_explication')">
+                    <h4>Demande d'Explications</h4>
+                    <p>Comment répondre de manière formelle à une interpellation de la hiérarchie.</p>
+                    <span class="btn-read">Voir la structure </span>
+                </article>
+                    
+                <!-- Carte 3 -->
+                <article class="card" onclick="loadLetter('lettre_motivation')">
+                    <h4>Lettre de motivation </h4>
+                    <p>Les règles d'or pour réussir votre lettre de motivation</p>
+                    <span class="btn-read">Voir la structure </span>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Pide de Page -->
+     <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Easy Letter's</strong> est un projet éducatif Open Source réalisé sans framework.</p>
+            <p>Vous souhaitez ajouter un modèle de lettre ? <a href="#" target="_blank">Participez au projet sur GitHub</a></p>
+            <p class="copyright">&#169; 2026 Le Ministre. Distribué sous licence GNU AGPL v3. </p>
+        </div>
+     </footer>
+</body>
+</html>
