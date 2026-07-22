@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //MENU DEROULANT(list)
     const categoryLinks = document.querySelectorAll('#category-menu a');
     
-    categoryLinks.forEach(link => {
+    categoryLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const categoryId = e.target.getAttribute('data-cat');
@@ -37,16 +37,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     <article class="letter-paper">
                         <div class="date section-hover">${formatText(data.structure.date)}</div>
                         <div class="expediteur section-hover">${formatText(data.structure.expediteur)}</div>
-                        <div class="destinaire section-hover">${formatText(data.structure.destinataire)}</div>
+                        <div class="destinataire section-hover">${formatText(data.structure.destinataire)}</div>
                         
 
                         <div class="objet section-hover"><strong>${data.structure.objet}</strong></div>
                         <div class="body-letter">
                             <p class="introduction section-hover">${data.structure.introduction}</p>
                             <div class="paragraphes section-hover">
-                            <p class="conclusion section-hover">${data.structure.corps}</p>
-                            <p class="conclusion section-hover">${data.structure.conclusion}</p>
-                            <p class="politesse section-hover">${data.structure.politesse}</p>
+                                <p class="coprs section-hover">${data.structure.corps}</p>
+                                <p class="conclusion section-hover">${data.structure.conclusion}</p>
+                                <p class="politesse section-hover">${data.structure.politesse}</p>
+                            </div>
                         </div>
                         <div class="signature section-hover">${data.structure.signature}</div>
                     </article>

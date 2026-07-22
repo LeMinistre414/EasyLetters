@@ -13,7 +13,7 @@ const correspData = [
             corps: "J'ai l'honneur de solliciter de votre bienveillance un accord de stage dans (nom de la structure)\n Agé de ...ans, je suis en fin de formation à ... en cycle ... \n  / Actuellement etudiant(e) en ... à ..., je suis à la recherche d'un stage d'impregnation/initiation d'une durée de [X] mois.",
             conclusion: "Je me tiens à votre entière disposition pour un entretien afin de vous détailler mes motivations.",
             politesse: "Dans l'attent d'une réponse favorable, veuillez agréer, Monsieur le Directeur, l'expression de ma considération distinguée.",
-            signature: ["Votre signature"],
+            signature: "[Votre signature]",
         },
         conseils: [
             "Joignez votre CV si cela est demandé.",
